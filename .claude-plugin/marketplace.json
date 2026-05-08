@@ -1,0 +1,37 @@
+{
+  "name": "hte-claude-tools",
+  "owner": {
+    "name": "HTE Switzerland"
+  },
+  "metadata": {
+    "description": "Independent Claude Code plugins by HTE Switzerland. Each plugin lives in its own repo and ships independently; this marketplace is a discovery manifest only.",
+    "homepage": "https://hendrikthurau.enterprises",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "claude-dejavu",
+      "source": "github:HthSolid/claude-dejavu",
+      "description": "Memory + recovery + code grounding. Restores deleted sessions, hybrid Postgres+Weaviate recall across past conversations, tree-sitter symbol indexing across 12 languages, eight identifier-grounding domains (env / DB / route / GraphQL / flag / CSS / i18n / module-export), and a 14-strategy deterministic rewriter that catches fabricated names before disk write. 89.3% reduction in hallucinated identifiers (n=400).",
+      "author": { "name": "HTE Switzerland" },
+      "keywords": [
+        "memory", "session-recovery", "postgres", "weaviate", "code-grounding",
+        "symbol-index", "anti-hallucination", "rewriter", "mcp"
+      ],
+      "category": "memory",
+      "strict": false
+    },
+    {
+      "name": "claude-chillbro",
+      "source": "github:HthSolid/claude-chillbro",
+      "description": "Auto-approves obviously-safe Bash commands and in-project file writes so Claude Code stops asking permission for every grep, cat, ls, and new file. Static allow/ask lists (~110 + ~75 patterns), self-learning (commands you've approved twice get auto-approved next time), context-aware probes (force-push to main asks, push to feature branch allows; public-repo gh actions ask, private-repo allows), and a headless 'claude -p' classifier as a last-resort fallback for unknown commands — no API key needed, reuses the user's existing Claude Code auth.",
+      "author": { "name": "HTE Switzerland" },
+      "keywords": [
+        "permissions", "bash", "automation", "developer-experience",
+        "hooks", "auto-approve", "quality-of-life"
+      ],
+      "category": "developer-experience",
+      "strict": false
+    }
+  ]
+}
